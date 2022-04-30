@@ -2,8 +2,8 @@ import socket
 import pygame
 import pickle
 
+# Socket
 host, ip = "localhost", 5556
-
 clientsocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 clientsocket.connect((host, ip))
 
@@ -299,11 +299,12 @@ def run():
             if last_touch == "yellow":
                 paddle3.points += 1
 
-            if last_touch == "grees":
+            if last_touch == "green":
                 paddle4.points += 1
 
             touch = False
 
+        # Send data over socket
         data = dict()
         points = dict()
         points["player1"] = paddle1.points

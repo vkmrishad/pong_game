@@ -279,7 +279,7 @@ def main():
             if last_touch == "yellow":
                 paddle3.points += 1
 
-            if last_touch == "grees":
+            if last_touch == "green":
                 paddle4.points += 1
 
             touch = False

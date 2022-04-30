@@ -1,12 +1,12 @@
 import socket, pickle
 
+# Socket
 host, ip = "localhost", 5556
-
 serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 serversocket.bind((host, ip))
-
 serversocket.listen(4)
 
+# Socket data schema
 data = {
     "points": {"player1": 0, "player2": 0, "player3": 0, "player4": 0},
     "paddle1_rect_y": 225,
@@ -25,7 +25,7 @@ def waiting_for_connections():
         connection.append(conn)
 
 
-def recieve_information():
+def receive_information():
     player_1_info = pickle.loads(connection[0].recv(1024))
     player_2_info = pickle.loads(connection[1].recv(1024))
     player_3_info = pickle.loads(connection[2].recv(1024))
@@ -43,6 +43,6 @@ while True:
     connection[2].send(data_arr)
     connection[3].send(data_arr)
 
-    player1, player2, player3, player4 = recieve_information()
+    player1, player2, player3, player4 = receive_information()
 
     data = {**player1, **player2, **player3, **player4}
