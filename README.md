@@ -1,8 +1,7 @@
 # pong_game
 Multiplayer (4 player over network) ping pong game
 
-![example workflow](https://github.com/vkmrishad/loan_app/actions/workflows/black.yaml/badge.svg)
-![example workflow](https://github.com/vkmrishad/loan_app/actions/workflows/django-ci.yaml/badge.svg)
+![example workflow](https://github.com/vkmrishad/pong_game/actions/workflows/black.yaml/badge.svg)
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 
 ## Clone
